@@ -34,7 +34,7 @@
           {{ form.hidden_tag() }}
 
           <div class="form-group">
-            <label class="text-normal text-dark">Username</label>
+            <label class="text-normal text-dark">Username hi~</label>
             {{ form.username(placeholder="Username", class="form-control") }}
           </div>
 
@@ -47,8 +47,7 @@
             <div class="peers ai-c jc-sb fxw-nw">
               <div class="peer">
                 <button type="submit" name="login" class="btn btn-primary">Login</button>
-                
-                &nbsp; &nbsp; 
+                &nbsp; &nbsp;
                 <span class="text-small font-weight-semibold">Not a member?</span> 
                 <a href="{{ url_for('authentication_blueprint.register') }}" class="text-black text-small">Register</a>
               </div>
@@ -56,6 +55,5 @@
           </div>
         </form>
       </div>
-    </div>  
 
 {% endblock content %}
