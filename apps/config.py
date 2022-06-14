@@ -21,7 +21,7 @@ class Config(object):
     ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')    
     
 class ProductionConfig(Config):
-    DEBUG = False
+    DEBUG = True
 
     # Security
     SESSION_COOKIE_HTTPONLY = True
