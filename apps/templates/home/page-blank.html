@@ -3,16 +3,37 @@
 {% block title %} Blank Page {% endblock title %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block stylesheets %}{% endblock stylesheets %}
+{% block stylesheets %}
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='test3') }}">
+{% endblock stylesheets %}
 
 {% block content %}
 
-    <!-- (Almost) A blank page -->
-    <h3>
-    Add content here
-    </h3>
+    <h1>CSS Can Do That</h1>
+    <p>
+        <button>click</button>
+        <button>these</button>
+        <button>buttons</button>
+    </p>
+    <p>
+        <button>press</button>
+        <button>keys</button>
+        <button>too</button>
+    </p>
+    <p>
+        Don’t forget to play
+        with your CSS.
+    </p>
+    <p>
+        And don’t forget to <a href="#viewsource">view the source</a>.
+    </p>
+    <pre id="viewsource" tabindex="-1"></pre>
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+
+    <link rel="stylesheet" href="{{ config.ASSETS_ROOT }}/js/test3.js">
+
+{% endblock javascripts %}

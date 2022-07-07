@@ -2,6 +2,7 @@
 """
 Copyright (c) 2019 - present AppSeed.us
 """
+from flask_socketio import emit
 
 from apps.home import blueprint
 from flask import render_template, request
@@ -10,16 +11,16 @@ from jinja2 import TemplateNotFound
 
 
 @blueprint.route('/index')
+@blueprint.route('/upload')
+@blueprint.route('/fileUpload')
 @login_required
 def index():
-
     return render_template('home/index.html', segment='index')
 
 
 @blueprint.route('/<template>')
 @login_required
 def route_template(template):
-
     try:
 
         if not template.endswith('.html'):
@@ -40,7 +41,6 @@ def route_template(template):
 
 # Helper - Extract current page name from request
 def get_segment(request):
-
     try:
 
         segment = request.path.split('/')[-1]
@@ -52,3 +52,5 @@ def get_segment(request):
 
     except:
         return None
+
+
